@@ -354,7 +354,8 @@ impl LocalPackages {
                 .packages
                 .iter()
                 .map(|p| (p.name.to_string(), p.version.clone()))
-                .collect(),
+                .sorted()
+                .collect::<HashMap<_, _>>(),
         }
     }
 }
