@@ -292,16 +292,6 @@ mod tests {
                     },
                 },
                 ManifestPackage {
-                    name: "awsome_local1".into(),
-                    version: Version::new(1, 2, 3),
-                    build_tools: ["gleam".into()].into(),
-                    otp_app: None,
-                    requirements: vec![],
-                    source: ManifestPackageSource::Local {
-                        path: PACKAGE.into(),
-                    },
-                },
-                ManifestPackage {
                     name: "gleeunit".into(),
                     version: Version::new(0, 4, 0),
                     build_tools: ["gleam".into()].into(),
@@ -309,6 +299,16 @@ mod tests {
                     requirements: vec!["gleam_stdlib".into()],
                     source: ManifestPackageSource::Hex {
                         outer_checksum: Base16Checksum(vec![3, 46]),
+                    },
+                },
+                ManifestPackage {
+                    name: "awsome_local1".into(),
+                    version: Version::new(1, 2, 3),
+                    build_tools: ["gleam".into()].into(),
+                    otp_app: None,
+                    requirements: vec![],
+                    source: ManifestPackageSource::Local {
+                        path: PACKAGE.into(),
                     },
                 },
             ],
